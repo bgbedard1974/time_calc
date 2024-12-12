@@ -8,6 +8,10 @@ class Time:
     # Add minutes from another Time object
     def add(self, time_obj):
         self.minutes = self.minutes + time_obj.minutes
+
+    # Subtract minutes from another Time object
+    def subtract(self, time_obj):
+        self.minutes = self.minutes - time_obj.minutes
     
     def parse(self, string):
         temp_minutes = 0
@@ -24,7 +28,7 @@ class Time:
     def __str__(self):
         temp_hours = 0
         temp_minutes = self.minutes
-        while temp_minutes > 60:
+        while temp_minutes >= 60:
             temp_hours = temp_hours + 1
             temp_minutes = temp_minutes - 60
 
